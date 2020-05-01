@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import {
   LoginPage
-} from "./screens";
+} from './screens';
 
 function App() {
   return (
