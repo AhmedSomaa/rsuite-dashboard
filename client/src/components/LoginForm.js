@@ -8,14 +8,11 @@ import {
 import PropTypes from 'prop-types';
 
 export class LoginForm extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            hidden: true,
-            username: '',
-            password: ''
-        }
+    state = {
+        hidden: true,
+        username: '',
+        password: ''
     }
 
     inputHandler = (value, e) => {
@@ -25,8 +22,8 @@ export class LoginForm extends React.Component {
     }
 
     loginHandler = () => {
-        let { hidden, primaryColor, ...credentials } = this.state;
-        console.log('Credentials Entered', credentials)
+        let { hidden, ...credentials } = this.state;
+        // redirect to home page
     }
 
     toggleHandler = () => {
@@ -35,6 +32,13 @@ export class LoginForm extends React.Component {
         })
     }
 
+    resetHandler = () => {
+        // redirect to reset password page
+    }
+
+    activateHandler = () => {
+        // redirect to create account page
+    }
 
     render() {
         let {
@@ -65,11 +69,11 @@ export class LoginForm extends React.Component {
                     className='d-flex align-items-center justify-content-center'
                 >
                     <Col style={{ fontFamily: 'Open Sans', width: '60%' }}>
-                        <h2 color='#2a2d34' style={{ fontFamily: 'Poppins' }}>{mainHeader}</h2>
+                        <h2 style={{ fontFamily: 'Poppins', color: primaryColor }}>{mainHeader}</h2>
                         <div className='mt-5'>
                             <Input
                                 id={usernameInputText}
-                                style={{ height: '60px'}}
+                                style={{ height: '60px' }}
                                 onChange={this.inputHandler}
                                 placeholder={usernameInputText}
                                 className='p-3'
@@ -77,7 +81,7 @@ export class LoginForm extends React.Component {
                             <Input
                                 id={passwordInputText}
                                 type={hidden ? 'password' : 'text'}
-                                style={{ height: '60px'}}
+                                style={{ height: '60px' }}
                                 onChange={this.inputHandler}
                                 placeholder={passwordInputText}
                                 className='mt-3 p-3'
