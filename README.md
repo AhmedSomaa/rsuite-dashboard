@@ -1,2 +1,2 @@
 # fluent-ui-dashboard
-A simple dashboard using Microsoft's Fluent UI
+A simple dashboard using rsuite
