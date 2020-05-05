@@ -22,7 +22,6 @@ export class LoginForm extends React.Component {
     }
 
     loginHandler = () => {
-        let { hidden, ...credentials } = this.state;
         // redirect to home page
     }
 
